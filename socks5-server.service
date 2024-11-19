@@ -1,0 +1,12 @@
+[Unit]
+Description=socks5 proxy server service
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/opt/socks5-server
+ExecStart=/opt/socks5-server/socks5-server
+
+[Install]
+WantedBy=multi-user.target

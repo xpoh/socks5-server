@@ -3,7 +3,9 @@ services:
 
   socks5:
     restart: always
-    image: serjs/go-socks5-proxy
-    env_file: .env
+    image: akaddr/socks5-proxy
+    environment:
+      - BIND_IP=0.0.0.0
+      - BIND_PORT=1080
     ports:
       - "1080:1080"
